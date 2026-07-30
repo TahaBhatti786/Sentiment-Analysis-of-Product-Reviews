@@ -154,6 +154,25 @@ Possible enhancements for this project include:
 
 ---
 
+## Project Status
+
+**Status:** Completed
+
+This project was successfully completed as part of the **CanvasGali Machine Learning Internship Program**.
+
+### Key Highlights
+
+- NLP-based sentiment analysis
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA)
+- Bag of Words and TF-IDF feature extraction
+- Logistic Regression and Multinomial Naive Bayes models
+- Model evaluation using Accuracy, Precision, Recall, F1-Score, Confusion Matrix, and ROC Curve
+- Custom review prediction
+- Model saving using Joblib
+
+---
+
 This Project is created under CanvasGali Internship Program.
 
 ---
