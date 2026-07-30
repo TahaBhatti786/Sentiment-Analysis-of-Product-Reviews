@@ -1,40 +1,39 @@
-````markdown
 # Sentiment Analysis of Product Reviews
 
 ## About the Project
 
-This project is part of my Machine Learning internship. The goal is to build a sentiment analysis model that can classify Amazon Alexa product reviews as either positive or negative.
+This project was developed as part of my Machine Learning Internship at **CanvasGali**. The objective is to classify Amazon Alexa product reviews into positive or negative sentiments using Natural Language Processing (NLP) and classical machine learning techniques.
 
-The project follows a typical machine learning workflow, starting from data preprocessing and exploratory analysis to model training, evaluation, and testing.
+The project covers the complete machine learning pipeline, including data preprocessing, exploratory data analysis, feature extraction, model training, evaluation, and testing on unseen reviews.
 
 ---
 
 ## Project Objectives
 
-- Analyze customer reviews using Natural Language Processing (NLP).
-- Clean and preprocess review text.
-- Convert text into numerical features using TF-IDF.
-- Train and compare different machine learning models.
-- Evaluate the models using classification metrics.
-- Test the final model on new reviews.
+- Perform sentiment analysis on product reviews.
+- Clean and preprocess textual data.
+- Convert text into numerical features using Bag of Words and TF-IDF.
+- Train and compare multiple machine learning models.
+- Evaluate model performance using standard classification metrics.
+- Predict sentiment for new customer reviews.
 
 ---
 
 ## Dataset
 
-The project uses the **Amazon Alexa Reviews** dataset from Kaggle.
+The project uses the **Amazon Alexa Reviews** dataset obtained from Kaggle.
 
-**File Format:** TSV (Tab-Separated Values)
+**Dataset Format:** TSV (Tab-Separated Values)
 
-### Main Columns
+### Dataset Columns
 
 | Column | Description |
 |---------|-------------|
 | rating | Customer rating (1–5 stars) |
-| date | Date of the review |
+| date | Review date |
 | variation | Product variation |
-| verified_reviews | Review text |
-| feedback | Sentiment label |
+| verified_reviews | Customer review text |
+| feedback | Sentiment label (Target Variable) |
 
 ### Target Variable
 
@@ -45,21 +44,22 @@ The project uses the **Amazon Alexa Reviews** dataset from Kaggle.
 
 ---
 
-## Technologies
+## Technologies Used
 
 - Python
-- Google Colab
+- Google Colab / Jupyter Notebook
 - Pandas
 - NumPy
 - NLTK
 - Scikit-learn
 - Matplotlib
+- Joblib
 
 ---
 
 ## Machine Learning Models
 
-The following models will be implemented and compared:
+The following models were implemented and evaluated:
 
 - Logistic Regression
 - Multinomial Naive Bayes
@@ -68,15 +68,20 @@ The following models will be implemented and compared:
 
 ## Project Workflow
 
-1. Load the dataset
-2. Explore the data
-3. Clean and preprocess review text
-4. Perform exploratory data analysis (EDA)
-5. Convert text into numerical features (Bag of Words & TF-IDF)
-6. Train machine learning models
-7. Evaluate model performance
-8. Test the model using custom reviews
-9. Save the trained model
+1. Data Loading
+2. Data Exploration
+3. Text Cleaning
+4. Stopword Removal
+5. Lemmatization
+6. Exploratory Data Analysis (EDA)
+7. Bag of Words Feature Extraction
+8. TF-IDF Feature Extraction
+9. Train-Test Split
+10. Logistic Regression Training & Evaluation
+11. Multinomial Naive Bayes Training & Evaluation
+12. Model Comparison
+13. Testing on Custom Reviews
+14. Saving the Trained Model
 
 ---
 
@@ -86,13 +91,15 @@ The following models will be implemented and compared:
 Sentiment-Analysis-of-Product-Reviews/
 │
 ├── dataset/
-│   └── amazon_alexa_reviews.tsv
+│   └── amazon_alexa.tsv
 │
 ├── notebooks/
 │
-├── outputs/
-│
 ├── models/
+│   ├── sentiment_model.pkl
+│   └── tfidf_vectorizer.pkl
+│
+├── outputs/
 │
 ├── reports/
 │
@@ -103,34 +110,50 @@ Sentiment-Analysis-of-Product-Reviews/
 
 ---
 
-## Progress
+## Features
 
-- ✅ Repository created
-- ✅ Project structure completed
-- ✅ Dataset added
-- ⏳ Data loading
-- ⏳ Data exploration
-- ⏳ Text preprocessing
-- ⏳ Exploratory Data Analysis
-- ⏳ Feature extraction
-- ⏳ Model training
-- ⏳ Model evaluation
-- ⏳ Testing on custom reviews
-- ⏳ Project documentation
+- Data preprocessing using NLTK
+- Text cleaning and normalization
+- Stopword removal
+- Lemmatization
+- Exploratory Data Analysis (EDA)
+- Bag of Words implementation
+- TF-IDF vectorization
+- Logistic Regression classifier
+- Multinomial Naive Bayes classifier
+- Model performance comparison
+- Prediction on custom reviews
+- Model serialization using Joblib
 
 ---
 
-## Future Work
+## Model Evaluation
 
-Some improvements that can be explored later include:
+Both machine learning models were evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Classification Report
+- Confusion Matrix
+
+The evaluation results were compared to identify the better-performing model for sentiment classification.
+
+---
+
+## Future Improvements
+
+Possible enhancements for this project include:
 
 - Hyperparameter tuning
 - Cross-validation
-- Streamlit web application for predictions
+- Handling class imbalance
 - Testing additional machine learning algorithms
+- Deploying the model using Streamlit or Flask
 
 ---
 
 This Project is created under CanvasGali Internship Program.
 
-
+---
