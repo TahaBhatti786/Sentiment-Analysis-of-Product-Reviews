@@ -131,4 +131,6 @@ Some improvements that can be explored later include:
 
 ---
 
+This Project is created under CanvasGali Internship Program.
+
 
